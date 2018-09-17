@@ -1,3 +1,60 @@
 <resources>
-    <string name="app_name">Write\'s Best Friend</string>
+    <!-- App name -->
+    <string name="app_name" translatable="false">Character Developer</string>
+    <string name="ADS_KEY" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+
+    <!-- Texto random -->
+    <string name="texto_muestra_1" translatable="false">Texto Corto</string>
+    <string name="texto_muestra_2" translatable="false">Texto de cantidad media de caracteres</string>
+    <string name="texto_muestra_3" translatable="false">Texto de muestra que se va a utilizar para la cuando se necesite ocupar una cantidad de espacio significativa</string>
+
+    <!-- Menu stuff -->
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="bienvenido">Welcome</string>
+    <string name="aceptar">Accept</string>
+    <string name="cancelar">Cancel</string>
+
+    <!-- titulos -->
+    <string name="action_settings">Settings</string>
+    <string name="cerrarSesion">Close</string>
+
+    <!-- Labels -->
+    <string name="inicio">Home</string>
+    <string name="historias">Stories</string>
+    <string name="personajes">Characters</string>
+    <string name="eventos">Events</string>
+    <string name="arte">Art</string>
+    <string name="personaje">Character\'s name</string>
+
+    <!-- Tools -->
+    <string name="save_option">Save</string>
+    <string name="export_option">Export</string>
+    <string name="share_option">Share</string>
+    <string name="help_option">Help</string>
+
+    <!-- Historia -->
+    <string name="description_portada_de_historia">Story\'s cover</string>
+    <string name="description_imagen_de_historia">Story\'s image</string>
+
+    <!-- Personaje -->
+    <string name="description_portada_de_personaje">Character\'s cover</string>
+    <string name="description_imagen_de_personaje">Characer\'s image</string>
+    <string name="personal_data_label">Personal data</string>
+    <string name="physical_data_label">Body</string>
+    <string name="personality_data_label">Personality</string>
+    <string name="past_data_label">Past</string>
+    <string name="develop_data_label">Development</string>
+    <string name="relationships_data_label">Relationships</string>
+    <string name="art_data_label">Art</string>
+
+    <!-- Eventos -->
+    <string name="description_portada_de_evento">Event\'s cover</string>
+    <string name="description_imagen_de_evento">Event\'s image</string>
+    <string name="participantes">Participants</string>
+
+    <!-- Arte -->
+    <string name="description_portada_de_arte">Art\'s cover</string>
+    <string name="description_imagen_de_arte">Art\'s cover</string>
+
 </resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!-- titulos -->
+    <string name="action_settings">Opciones</string>
+    <string name="cerrarSesion">Cerrar Sesión</string>
+
+    <!-- Labels -->
+    <string name="inicio">Inicio</string>
+    <string name="historias">Historias</string>
+    <string name="personajes">Personajes</string>
+    <string name="eventos">Eventos</string>
+    <string name="arte">Arte</string>
+    <string name="personaje">Personaje</string>
+
+    <!-- Tools -->
+    <string name="save_option">Guardar</string>
+    <string name="export_option">Exportar</string>
+    <string name="share_option">Compartir</string>
+    <string name="help_option">Ayuda</string>
+
+    <!-- Historia -->
+    <string name="description_portada_de_historia">Portada de historia</string>
+    <string name="description_imagen_de_historia">Imagen de historia</string>
+
+    <!-- Personaje -->
+    <string name="description_portada_de_personaje">Portada de personaje</string>
+    <string name="description_imagen_de_personaje">Imagen de personaje</string>
+    <string name="personal_data_label">Datos Personales</string>
+    <string name="physical_data_label">Físico</string>
+    <string name="personality_data_label">Personalidad</string>
+    <string name="past_data_label">Pasado</string>
+    <string name="develop_data_label">Desarrollo</string>
+    <string name="relationships_data_label">Relaciones</string>
+    <string name="art_data_label">Arte</string>
+
+    <!-- Eventos -->
+    <string name="description_portada_de_evento">Portada de evento</string>
+    <string name="description_imagen_de_evento">Imagen de evento</string>
+    <string name="participantes">Participantes</string>
+
+    <!-- Arte -->
+    <string name="description_portada_de_arte">Portada de arte</string>
+    <string name="description_imagen_de_arte">Imagen de arte</string>
+</resources>

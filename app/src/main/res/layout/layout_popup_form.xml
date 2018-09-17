@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margen_grande"
+    android:layout_marginLeft="@dimen/margen_grande"
+    android:layout_marginTop="100dp"
+    android:layout_marginEnd="@dimen/margen_grande"
+    android:layout_marginRight="@dimen/margen_grande"
+    android:layout_marginBottom="75dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_formTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margen_lateral"
+        android:layout_marginTop="@dimen/margen_chico"
+        android:layout_marginEnd="@dimen/margen_lateral"
+        android:layout_marginBottom="@dimen/margen_chico"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_text" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresar titulo" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/edittext_formValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="@dimen/margen_chico"
+        android:hint="Engresar texto"
+        android:paddingStart="@dimen/margen_chico"
+        android:paddingTop="@dimen/margen_chico"
+        android:paddingEnd="@dimen/margen_chico"
+        android:paddingBottom="@dimen/margen_chico"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_text" />
+
+    <androidx.appcompat.widget.ButtonBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margen_lateral">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_clickeable_chico"
+            android:layout_marginEnd="@dimen/margen_lateral"
+            android:layout_weight="1"
+            android:text="@string/cancelar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_accept"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_clickeable_chico"
+            android:layout_marginStart="@dimen/margen_lateral"
+            android:layout_weight="1"
+            android:text="@string/aceptar"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.ButtonBarLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ligth_gray">
+
+    <TextView
+        android:id="@+id/textView_dataFieldTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ligth_gray"
+        android:paddingStart="@dimen/margen_lateral"
+        android:paddingTop="@dimen/margen_chico"
+        android:paddingEnd="@dimen/margen_lateral"
+        android:paddingBottom="@dimen/margen_chico"
+        android:text="@string/texto_muestra_3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/textView_dataFieldClickable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_dataFieldTitle"
+        android:layout_marginStart="@dimen/margen_chico"
+        android:layout_marginTop="@dimen/margen_chico"
+        android:layout_marginEnd="@dimen/margen_chico"
+        android:layout_marginBottom="@dimen/margen_chico"
+        android:background="@drawable/corner_radius_white"
+        android:paddingStart="@dimen/margen_chico"
+        android:paddingTop="@dimen/margen_chico"
+        android:paddingEnd="@dimen/margen_chico"
+        android:paddingBottom="@dimen/margen_chico"
+        android:text="@string/texto_muestra_3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_text" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/textView_dataFieldClickable"
+        android:background="@color/black" />
+</RelativeLayout>

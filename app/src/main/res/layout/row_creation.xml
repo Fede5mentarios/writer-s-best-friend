@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_item_muy_grande"
+    android:layout_marginStart="@dimen/margen_lateral"
+    android:layout_marginTop="@dimen/margen_lateral"
+    android:layout_marginEnd="@dimen/margen_lateral"
+    android:layout_marginBottom="@dimen/margen_lateral"
+    android:background="@drawable/corner_radius_white">
+
+    <LinearLayout
+        android:id="@+id/relativeLayout_superior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margen_lateral"
+        android:layout_marginTop="@dimen/margen_lateral"
+        android:layout_marginEnd="@dimen/margen_lateral"
+        android:layout_marginBottom="@dimen/margen_chico"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/imageView_portada"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:minHeight="@dimen/size_item_grande" />
+
+        <LinearLayout
+            android:id="@+id/relativeLayout_datos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margen_lateral"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_dato1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/texto_muestra_1"
+                android:textSize="@dimen/big_text"
+                android:layout_marginBottom="@dimen/margen_chico"/>
+            <TextView
+                android:id="@+id/textView_dato2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/texto_muestra_1"
+                android:textSize="@dimen/normal_text"
+                android:layout_marginBottom="@dimen/margen_chico"/>
+            <TextView
+                android:id="@+id/textView_dato3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/texto_muestra_2"
+                android:textSize="@dimen/small_text"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_tags"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_item_chico"
+        android:layout_below="@id/relativeLayout_superior"
+        android:layout_marginStart="@dimen/margen_lateral"
+        android:layout_marginEnd="@dimen/margen_lateral"
+        android:layout_marginBottom="@dimen/margen_lateral"
+        android:background="@color/primary_color" />
+</RelativeLayout>

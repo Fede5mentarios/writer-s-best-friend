@@ -1,11 +1,19 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
 
+    <style name="WritersbfTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryDark">@color/primary_dark_color</item>
+        <item name="colorAccent">@color/secondary_light_color</item>
+        <item name="elevation">4dp</item>
+        <item name="spinnerStyle">@style/Base.Widget.AppCompat.Spinner.Underlined</item>
+
+        <!--<item name="colorPrimaryLight">?attr/colorPrimary</item>-->
+        <!--<item name="colorSecondary">?attr/colorPrimary</item>-->
+        <!--<item name="colorSecondaryLight">?attr/colorPrimaryLight</item>-->
+        <!--<item name="colorSecondaryDark">?attr/colorPrimaryDark</item>-->
+        <!--<item name="snackbarButtonStyle">?attr/borderlessButtonStyle</item>-->
+    </style>
 </resources>
