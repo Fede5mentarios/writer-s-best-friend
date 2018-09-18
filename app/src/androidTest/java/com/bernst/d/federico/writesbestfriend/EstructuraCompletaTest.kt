@@ -1,13 +1,13 @@
-package com.characterdeveloper
+package com.bernst.d.federico.writesbestfriend
 
-import androidx.room.Room
-import androidx.test.InstrumentationRegistry
-import androidx.test.runner.AndroidJUnit4
-import com.characterdeveloper.db.FormDataBase
-import com.characterdeveloper.db.dao.*
-import com.characterdeveloper.model.InformacionVersion
-import com.characterdeveloper.model.form.*
-import com.characterdeveloper.model.form.manytomany.CategoriaxEstructura
+import android.arch.persistence.room.Room
+import android.support.test.InstrumentationRegistry
+import android.support.test.runner.AndroidJUnit4
+import com.bernst.d.federico.writesbestfriend.db.FormDataBase
+import com.bernst.d.federico.writesbestfriend.db.dao.*
+import com.bernst.d.federico.writesbestfriend.model.InformacionVersion
+import com.bernst.d.federico.writesbestfriend.model.form.*
+import com.bernst.d.federico.writesbestfriend.model.form.manytomany.CategoriaxEstructura
 import org.hamcrest.CoreMatchers.equalTo
 import org.junit.After
 import org.junit.Assert.assertThat
