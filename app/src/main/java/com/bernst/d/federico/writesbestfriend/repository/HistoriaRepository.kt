@@ -1,4 +1,4 @@
-package com.bernst.d.federico.writesbestfriend.db.repository
+package com.bernst.d.federico.writesbestfriend.repository
 
 import com.bernst.d.federico.writesbestfriend.db.dao.EstructuraDao
 import com.bernst.d.federico.writesbestfriend.db.dao.HistoriaDao

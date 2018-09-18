@@ -12,4 +12,7 @@ interface EstructuraDao : BaseDao<Estructura> {
 
     @Query("SELECT * from Estructura where codigo = :id")
     fun byID(id: Long): Estructura
+
+    @Query("SELECT e.* from Estructura e join CategoriaxEstructura x on x.codEstructura = e.codigo where x.codCategoria = :codigoCategoria")
+    fun byCategoriaID(codigoCategoria: Long): List<Estructura>
 }

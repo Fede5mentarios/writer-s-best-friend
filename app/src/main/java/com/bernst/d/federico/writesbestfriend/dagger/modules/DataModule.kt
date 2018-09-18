@@ -5,7 +5,7 @@ import com.bernst.d.federico.writesbestfriend.db.FormDataBase
 import com.bernst.d.federico.writesbestfriend.db.dao.EstructuraDao
 import com.bernst.d.federico.writesbestfriend.db.dao.HistoriaDao
 import com.bernst.d.federico.writesbestfriend.db.dao.PersonajeDao
-import com.bernst.d.federico.writesbestfriend.db.repository.HistoriaRepository
+import com.bernst.d.federico.writesbestfriend.repository.HistoriaRepository
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

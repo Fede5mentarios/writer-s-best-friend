@@ -3,6 +3,7 @@ package com.bernst.d.federico.writesbestfriend.db.dao
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.OnConflictStrategy.REPLACE
+import android.arch.persistence.room.Query
 import android.arch.persistence.room.Update
 import com.bernst.d.federico.writesbestfriend.model.creation.manytomany.PersonajexEvento
 import com.bernst.d.federico.writesbestfriend.model.creation.manytomany.TagxCreacion
@@ -37,4 +38,7 @@ interface ManyToManyDao {
 
     @Update(onConflict = REPLACE)
     fun update(obj: TagxCreacion)
+
+    @Query("SELECT * from CategoriaxEstructura where codEstructura = :codigo")
+    fun findByEstructura(codigo: Long): List<CategoriaxEstructura>
 }

@@ -1,7 +1,7 @@
 package com.bernst.d.federico.writesbestfriend.viewmodel
 
 import com.bernst.d.federico.writesbestfriend.dagger.components.WritersbfComponents
-import com.bernst.d.federico.writesbestfriend.db.repository.HistoriaRepository
+import com.bernst.d.federico.writesbestfriend.repository.HistoriaRepository
 import com.bernst.d.federico.writesbestfriend.utils.Filtro
 import com.bernst.d.federico.writesbestfriend.utils.Ordenador
 import javax.inject.Inject
