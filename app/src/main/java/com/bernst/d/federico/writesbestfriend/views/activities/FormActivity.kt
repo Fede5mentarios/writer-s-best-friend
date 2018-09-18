@@ -75,8 +75,6 @@ class FormActivity : BasicActivity<CharacterViewModel>(CharacterViewModel::class
     override val tituloId: Int
         get() = R.string.personaje
 
-    override fun injectDependencies(components: WritersbfComponents) = components.inject(this)
-
     companion object {
 
         private val CHARACTER_ID = "CHARACTER_ID"

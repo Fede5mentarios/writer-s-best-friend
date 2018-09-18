@@ -11,6 +11,6 @@ data class Art(
         @PrimaryKey(autoGenerate = true) var codigo: Long,
         @ColumnInfo var pathImagen: String,
         @Embedded var link: Link,
-        @Embedded var info: InformacionVersion)
+        @Embedded(prefix = "info_") var info: InformacionVersion?)
 
 data class Link(var id: Long, var tableName: String)

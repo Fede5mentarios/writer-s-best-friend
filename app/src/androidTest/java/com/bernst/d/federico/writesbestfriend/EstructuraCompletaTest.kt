@@ -32,18 +32,12 @@ class EstructuraCompletaTest {
     @Before
     fun createDb() {
         val context = InstrumentationRegistry.getTargetContext()
-//        mDb = Room.databaseBuilder(context, FormDataBase::class.java, "testFormDataBase.db").build()
         mDb = Room.inMemoryDatabaseBuilder(context, FormDataBase::class.java).build()
         estructuraDao = mDb!!.estructuraDao()
         categoriaDao = mDb!!.categoriaDao()
         subcategoriaDao = mDb!!.subcategoriaDao()
         campoDao = mDb!!.campoDao()
         manyToManyDao = mDb!!.manyToManyDao()
-    }
-
-    @Test
-    fun DBOpenTest() {
-        assertThat(mDb?.isOpen, equalTo(true))
     }
 
     @Test
@@ -119,6 +113,7 @@ class EstructuraCompletaTest {
 
     @After
     fun closeDb() {
+        mDb?.clearAllTables()
         mDb?.close()
     }
 }

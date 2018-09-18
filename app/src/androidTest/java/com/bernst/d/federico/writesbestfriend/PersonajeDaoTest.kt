@@ -21,27 +21,28 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class PersonajeDaoTest {
 
-    private var dao: PersonajeDao? = null
-    private var mDb: FormDataBase? = null
+    private lateinit var dao: PersonajeDao
+    private lateinit var mDb: FormDataBase
 
     @Before
     fun createDb() {
         val context = InstrumentationRegistry.getTargetContext()
         mDb = Room.inMemoryDatabaseBuilder(context, FormDataBase::class.java).build()
-        dao = mDb!!.personajeDao()
+        dao = mDb.personajeDao()
     }
 
     @After
     fun closeDb() {
-        mDb = null
+        mDb.clearAllTables()
+        mDb.close()
     }
 
     @Test
     fun IOPersonaje() {
         val p = Personaje(1, "desc", 1, 1, InformacionVersion.new())
 
-        dao!!.insert(p)
-        val result = dao!!.findAll()
+        dao.insert(p)
+        val result = dao.findAll()
         assertThat(result.size, equalTo(1))
         assertThat(result.first(), equalTo(p))
     }

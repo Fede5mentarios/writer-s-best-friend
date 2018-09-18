@@ -61,12 +61,12 @@ class PersonajeCompletoTest {
         val campo5 = Campo(5, 2, "Genero", "Si, ya se, soy progre", true, Division(2, false, true), InformacionVersion.new())
         val campo6 = Campo(6, 2, "Etnia", null, false, Division(3, false, true), InformacionVersion.new())
         campoDao!!.insert(campo1, campo2, campo3, campo4, campo5, campo6)
-
     }
 
     @After
     fun closeDb() {
-        mDb = null
+        mDb?.clearAllTables()
+        mDb?.close()
     }
 
     @Test

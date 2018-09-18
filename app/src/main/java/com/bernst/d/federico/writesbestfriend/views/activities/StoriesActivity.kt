@@ -19,10 +19,6 @@ class StoriesActivity(override val tituloId: Int = R.string.historias) : ListAct
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun injectDependencies(components: WritersbfComponents) {
-//            components.inject(this)
-    }
-
     override fun iniciarObservers() {
         viewModel.creations.observe(this, Observer { creations ->
             creations?.let { actualizarRecycler(it) }
@@ -30,7 +26,6 @@ class StoriesActivity(override val tituloId: Int = R.string.historias) : ListAct
     }
 
     override fun iniciarListeners() {
-//        floatingButton_new.setOnClickListener { newCreation() }
     }
 
     override val mainView: Int

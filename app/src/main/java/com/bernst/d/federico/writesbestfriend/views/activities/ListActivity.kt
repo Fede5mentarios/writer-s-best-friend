@@ -24,7 +24,7 @@ abstract class ListActivity<T : CreationViewModel>(override val viewModelClazz: 
     }
 
     override fun iniciarListeners() {
-//        floatingButton_new.setOnClickListener { newCreation() }
+        floatingButton_new.setOnClickListener { newCreation() }
     }
 
 

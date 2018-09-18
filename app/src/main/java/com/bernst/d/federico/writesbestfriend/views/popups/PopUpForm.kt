@@ -9,13 +9,6 @@ import kotlinx.android.synthetic.main.layout_popup_form.*
 
 class PopUpForm : DialogFragment() {
 
-    /*
-    @BindDrawable(R.drawable.flat_button_red)
-    Drawable buttonRed;
-    @BindDrawable(R.drawable.flat_button_dark_gray)
-    Drawable buttonGray;
-*/
-
     private var title: String? = null
     private var desc: String? = null
     private var viewID: Int? = null

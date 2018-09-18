@@ -16,8 +16,5 @@ class Converters {
     }
 
     @TypeConverter
-    fun dateToTimestamp(calendar: Calendar?): Long? {
-        return calendar?.timeInMillis
-    }
-
+    fun dateToTimestamp(calendar: Calendar?) = calendar?.timeInMillis
 }

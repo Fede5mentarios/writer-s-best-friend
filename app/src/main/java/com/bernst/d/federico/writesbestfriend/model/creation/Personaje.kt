@@ -1,13 +1,9 @@
 package com.bernst.d.federico.writesbestfriend.model.creation
 
-import android.arch.persistence.room.ColumnInfo
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.ForeignKey
-import android.arch.persistence.room.Index
+import android.arch.persistence.room.*
 import com.bernst.d.federico.writesbestfriend.model.InformacionVersion
 
-@Entity(
-        indices = [(Index(value = arrayOf("codHistoria")))],
+@Entity(indices = [(Index(value = arrayOf("codHistoria")))],
         foreignKeys = [(ForeignKey(
                 entity = Historia::class,
                 parentColumns = arrayOf("codigo"),
@@ -19,4 +15,4 @@ class Personaje(
         @ColumnInfo var descripcion: String,
         @ColumnInfo var codHistoria: Long,
         codEstructura: Long,
-        info: InformacionVersion) : Creacion(codigo,codEstructura, info)
+        @Embedded(prefix = "info_") override var info: InformacionVersion = InformacionVersion.new()) : Creacion(codigo, codEstructura)

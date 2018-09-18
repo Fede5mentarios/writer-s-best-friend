@@ -81,19 +81,19 @@
                 android:layout_alignParentBottom="true"
                 android:elevation="@dimen/elevation_card">
 
-                <!--<com.google.android.material.bottomappbar.BottomAppBar-->
-                <!--android:id="@+id/bottomAppBar"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="bottom"-->
-                <!--app:navigationIcon="@drawable/baseline_menu_white_24" />-->
+                <android.support.design.bottomappbar.BottomAppBar
+                    android:id="@+id/bottomAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:navigationIcon="@drawable/baseline_menu_white_24" />
 
-                <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
-                <!--android:id="@+id/floatingButton_new"-->
-                <!--android:layout_width="@dimen/size_fab_normal"-->
-                <!--android:layout_height="@dimen/size_fab_normal"-->
-                <!--android:layout_alignParentBottom="true"-->
-                <!--app:layout_anchor="@id/bottomAppBar" />-->
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floatingButton_new"
+                    android:layout_width="@dimen/size_fab_normal"
+                    android:layout_height="@dimen/size_fab_normal"
+                    android:layout_alignParentBottom="true"
+                    app:layout_anchor="@id/bottomAppBar" />
             </android.support.design.widget.CoordinatorLayout>
         </RelativeLayout>
 

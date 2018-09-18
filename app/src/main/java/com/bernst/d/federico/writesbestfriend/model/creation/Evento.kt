@@ -1,9 +1,6 @@
 package com.bernst.d.federico.writesbestfriend.model.creation
 
-import android.arch.persistence.room.ColumnInfo
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.ForeignKey
-import android.arch.persistence.room.Index
+import android.arch.persistence.room.*
 import com.bernst.d.federico.writesbestfriend.model.InformacionVersion
 
 @Entity(indices = [(Index(value = arrayOf("codEstructura"))), (Index(value = arrayOf("codHistoria")))],
@@ -17,4 +14,4 @@ class Evento(
         codigo: Long,
         @ColumnInfo var codHistoria: Long,
         codEstructura: Long,
-        info: InformacionVersion) : Creacion(codigo, codEstructura, info)
+        @Embedded(prefix = "info_") override var info: InformacionVersion = InformacionVersion.new()) : Creacion(codigo, codEstructura)

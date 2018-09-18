@@ -20,6 +20,4 @@ class CharacterListActivity : ListActivity<CharactersViewModel>(CharactersViewMo
     override val tituloId: Int
         get() = personajes
 
-
-    override fun injectDependencies(components: WritersbfComponents) = components.inject(this)
 }

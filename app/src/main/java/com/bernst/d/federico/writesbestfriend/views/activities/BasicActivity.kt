@@ -12,6 +12,8 @@ import com.bernst.d.federico.writesbestfriend.views.Navigator
 import com.google.android.gms.ads.*
 import dagger.android.AndroidInjection
 import javax.inject.Inject
+import com.crashlytics.android.Crashlytics
+import io.fabric.sdk.android.Fabric
 
 abstract class BasicActivity<T : CommonViewModel>(open val viewModelClazz: Class<T>) : AppCompatActivity() {
 
@@ -29,7 +31,9 @@ abstract class BasicActivity<T : CommonViewModel>(open val viewModelClazz: Class
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
+        Fabric.with(this, Crashlytics())
         super.onCreate(savedInstanceState)
+
         // Setup handler for uncaught exceptions.
         iniciarViewModel(this.component)
         setContentView(mainView)
@@ -208,8 +212,6 @@ abstract class BasicActivity<T : CommonViewModel>(open val viewModelClazz: Class
     protected abstract val mainView: Int
 
     protected abstract val adView: AdView?
-
-    abstract fun injectDependencies(components: WritersbfComponents)
 
     private fun iniciarADs() {
         MobileAds.initialize(this, ads_KEY)

@@ -15,6 +15,8 @@ import com.bernst.d.federico.writesbestfriend.viewmodel.CommonViewModel
 import com.bernst.d.federico.writesbestfriend.views.Navigator
 import com.bernst.d.federico.writesbestfriend.views.activities.BasicActivity
 import com.bernst.d.federico.writesbestfriend.views.interfaces.FragmentView
+import dagger.android.AndroidInjection
+import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
 abstract class BasicFragment<T : CommonViewModel>(private val viewModelClazz: Class<T>) : Fragment(), FragmentView {
@@ -33,7 +35,7 @@ abstract class BasicFragment<T : CommonViewModel>(private val viewModelClazz: Cl
     protected abstract val viewId: Int
 
     override fun onAttach(context: Context?) {
-//        AndroidInjection.inject(this)
+        AndroidSupportInjection.inject(this)
         iniciarViewModel(this.component)
         super.onAttach(context)
     }

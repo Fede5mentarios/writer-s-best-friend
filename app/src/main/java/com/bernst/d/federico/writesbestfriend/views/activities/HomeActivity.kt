@@ -45,8 +45,6 @@ class HomeActivity : BasicActivity<HomeViewModel>(HomeViewModel::class.java) {
     override val mainView: Int
         get() = R.layout.activity_home
 
-    override fun injectDependencies(components: WritersbfComponents) = components.inject(this)
-
     companion object {
         private const val EXIT_KEY = "EXIT_APP"
     }
