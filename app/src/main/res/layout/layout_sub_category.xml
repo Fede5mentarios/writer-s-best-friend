@@ -44,7 +44,7 @@
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <android.arch.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_dataFields"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,6 +1,6 @@
 package com.bernst.d.federico.writesbestfriend.views.activities
 
-import androidx.fragment.app.Fragment
+import android.support.v4.app.Fragment
 import com.bernst.d.federico.writesbestfriend.viewmodel.CommonViewModel
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector

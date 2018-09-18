@@ -12,12 +12,12 @@
         android:layout_height="wrap_content" />
 
     <!--The backdrop view-->
-    <com.pedromassango.ibackdrop.Backdrop
+    <RelativeLayout
         android:id="@+id/backdrop_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:closeIcon="@drawable/ic_drop_close"
-        app:openIcon="@drawable/ic_drop_open">
+        android:layout_height="match_parent">
+        <!--app:closeIcon="@drawable/ic_drop_close"-->
+        <!--app:openIcon="@drawable/ic_drop_open"-->
 
         <!--your back view-->
         <RelativeLayout
@@ -97,7 +97,7 @@
             </android.support.design.widget.CoordinatorLayout>
         </RelativeLayout>
 
-    </com.pedromassango.ibackdrop.Backdrop>
+    </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/frameLayout_popup"

@@ -1,9 +1,9 @@
 package com.bernst.d.federico.writesbestfriend.views.components
 
 import android.content.Context
+import android.support.design.widget.CoordinatorLayout
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.bernst.d.federico.writesbestfriend.R
 
 /**

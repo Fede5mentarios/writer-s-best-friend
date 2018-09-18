@@ -1,6 +1,6 @@
 package com.bernst.d.federico.writesbestfriend.views.activities
 
-import android.app.Activity
+import android.support.v7.app.AppCompatActivity
 import android.arch.lifecycle.Observer
 import android.content.Intent
 import android.view.View
@@ -53,7 +53,7 @@ abstract class ListActivity<T : CreationViewModel>(override val viewModelClazz: 
         get() = adsView_top
 
     companion object {
-        fun getIntent(from: Activity): Intent {
+        fun getIntent(from: AppCompatActivity): Intent {
             val intent = Intent(from, ListActivity::class.java)
 
             return intent

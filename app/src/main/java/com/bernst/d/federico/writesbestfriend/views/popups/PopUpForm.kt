@@ -2,11 +2,12 @@ package com.bernst.d.federico.writesbestfriend.views.popups
 
 import android.app.Dialog
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
+import android.support.v4.app.DialogFragment
+import android.support.v7.app.AlertDialog
 import com.bernst.d.federico.writesbestfriend.R
 import kotlinx.android.synthetic.main.layout_popup_form.*
 
-class PopUpForm : androidx.fragment.app.DialogFragment() {
+class PopUpForm : DialogFragment() {
 
     /*
     @BindDrawable(R.drawable.flat_button_red)

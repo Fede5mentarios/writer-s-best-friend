@@ -1,6 +1,7 @@
 package com.bernst.d.federico.writesbestfriend.core
 
 import android.app.Activity
+import android.support.v7.app.AppCompatActivity
 import android.support.multidex.MultiDexApplication
 import com.bernst.d.federico.writesbestfriend.dagger.components.DaggerWritersbfComponents
 import com.bernst.d.federico.writesbestfriend.dagger.components.WritersbfComponents
@@ -29,5 +30,5 @@ class WritersbfApplication : MultiDexApplication(), HasActivityInjector {
         component.inject(this)
     }
 
-    override fun activityInjector(): AndroidInjector<Activity> = dispatchingActivityInjector
+    override fun activityInjector(): AndroidInjector<Activity>? = dispatchingActivityInjector
 }

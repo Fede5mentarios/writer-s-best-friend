@@ -45,7 +45,7 @@
         android:textColor="@color/black"
         android:textSize="@dimen/normal_text" />
 
-    <androidx.appcompat.widget.ButtonBarLayout
+    <android.arch.appcompat.widget.ButtonBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/margen_lateral">
@@ -71,5 +71,5 @@
             android:textColor="@color/black"
             android:textColorHint="@color/white"
             android:textStyle="bold" />
-    </androidx.appcompat.widget.ButtonBarLayout>
+    </android.arch.appcompat.widget.ButtonBarLayout>
 </LinearLayout>

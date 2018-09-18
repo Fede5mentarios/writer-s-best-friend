@@ -1,7 +1,7 @@
 package com.bernst.d.federico.writesbestfriend.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.arch.lifecycle.LiveData
+import android.arch.lifecycle.MutableLiveData
 import com.bernst.d.federico.writesbestfriend.dagger.components.WritersbfComponents
 import com.bernst.d.federico.writesbestfriend.model.creation.Personaje
 import com.bernst.d.federico.writesbestfriend.utils.Filtro

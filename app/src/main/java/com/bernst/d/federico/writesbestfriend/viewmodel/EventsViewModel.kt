@@ -1,8 +1,8 @@
 package com.bernst.d.federico.writesbestfriend.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import android.arch.lifecycle.LiveData
+import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.ViewModel
 import com.bernst.d.federico.writesbestfriend.model.creation.Evento
 
 class EventsViewModel : ViewModel() {
