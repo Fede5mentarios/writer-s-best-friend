@@ -3,7 +3,7 @@ package com.bernst.d.federico.writesbestfriend.model.form
 import android.arch.persistence.room.*
 import com.bernst.d.federico.writesbestfriend.model.InformacionVersion
 
-class SubcategoriaDTO {
+class SubcategoriaConCampos {
 
     @Embedded
     var subcategoria: SubCategoria = SubCategoria(-1, -1, "", "", Division.new(), InformacionVersion.new())

@@ -11,7 +11,9 @@ import com.bernst.d.federico.writesbestfriend.model.creation.*
 import com.bernst.d.federico.writesbestfriend.model.creation.manytomany.PersonajexEvento
 import com.bernst.d.federico.writesbestfriend.model.creation.manytomany.TagxCreacion
 import com.bernst.d.federico.writesbestfriend.model.form.*
-import com.bernst.d.federico.writesbestfriend.model.form.manytomany.CategoriaxEstructura
+import com.bernst.d.federico.writesbestfriend.model.form.versionado.CampoxVersion
+import com.bernst.d.federico.writesbestfriend.model.form.versionado.CategoriaxVersion
+import com.bernst.d.federico.writesbestfriend.model.form.versionado.SubcategoriaxVersion
 import dagger.Module
 
 @Module
@@ -25,12 +27,17 @@ import dagger.Module
     Header::class,
 
     Creacion::class,
+    Version::class,
     Personaje::class,
     Evento::class,
     Historia::class,
     Art::class,
     Tag::class,
-    CategoriaxEstructura::class,
+
+    CategoriaxVersion::class,
+    SubcategoriaxVersion::class,
+    CampoxVersion::class,
+
     PersonajexEvento::class,
     TagxCreacion::class],
         version = WritersbfDB.VERSION, exportSchema = false)   // TODO Averiguar sobre exportSchema

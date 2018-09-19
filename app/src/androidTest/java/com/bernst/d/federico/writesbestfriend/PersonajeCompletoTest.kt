@@ -8,7 +8,6 @@ import com.bernst.d.federico.writesbestfriend.db.dao.*
 import com.bernst.d.federico.writesbestfriend.model.InformacionVersion
 import com.bernst.d.federico.writesbestfriend.model.creation.Personaje
 import com.bernst.d.federico.writesbestfriend.model.form.*
-import com.bernst.d.federico.writesbestfriend.model.form.manytomany.CategoriaxEstructura
 import org.hamcrest.core.IsEqual.equalTo
 import org.junit.After
 import org.junit.Assert.assertThat

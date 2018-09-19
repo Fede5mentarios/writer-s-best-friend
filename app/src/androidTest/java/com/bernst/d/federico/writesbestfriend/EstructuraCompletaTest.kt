@@ -7,7 +7,6 @@ import com.bernst.d.federico.writesbestfriend.db.FormDataBase
 import com.bernst.d.federico.writesbestfriend.db.dao.*
 import com.bernst.d.federico.writesbestfriend.model.InformacionVersion
 import com.bernst.d.federico.writesbestfriend.model.form.*
-import com.bernst.d.federico.writesbestfriend.model.form.manytomany.CategoriaxEstructura
 import org.hamcrest.CoreMatchers.equalTo
 import org.junit.After
 import org.junit.Assert.assertThat
@@ -56,16 +55,14 @@ class EstructuraCompletaTest {
         val estructura = Estructura(1, "Estructura", false, InformacionVersion.new())
         estructuraDao!!.insert(estructura)
 
-        val categoria = Categoria(1, "Categoria", Division.new().copy(custom = false), InformacionVersion.new())
+        val categoria = Categoria(1, 1, "Categoria", Division.new().copy(custom = false), InformacionVersion.new())
         categoriaDao!!.insert(categoria)
-
-        manyToManyDao!!.insert(CategoriaxEstructura(1, 1))
 
         val result = categoriaDao!!.findAll()
         assertThat(result.size, equalTo(1))
         assertThat(result.first(), equalTo(categoria))
 
-        assertThat(categoriaDao!!.findByParent(estructura.codigo).first(), equalTo(categoria))
+        assertThat(categoriaDao!!.findByParent(estructura.codigo!!).first(), equalTo(categoria))
     }
 
     @Test
@@ -73,10 +70,8 @@ class EstructuraCompletaTest {
         val estructura = Estructura(1, "Estructura", false, InformacionVersion.new())
         estructuraDao!!.insert(estructura)
 
-        val categoria = Categoria(1, "Categoria", Division.new().copy(custom = false), InformacionVersion.new())
+        val categoria = Categoria(1, 1, "Categoria", Division.new().copy(custom = false), InformacionVersion.new())
         categoriaDao!!.insert(categoria)
-
-        manyToManyDao!!.insert(CategoriaxEstructura(1, 1))
 
         val subCategoria = SubCategoria(1, 1, "Subcategoria", "Ayuda", Division.new().copy(custom = false), InformacionVersion.new())
         subcategoriaDao!!.insert(subCategoria)
@@ -85,7 +80,7 @@ class EstructuraCompletaTest {
         assertThat(result.size, equalTo(1))
         assertThat(result.first(), equalTo(subCategoria))
 
-        assertThat(subcategoriaDao!!.findByParent(categoria.codigo).first(), equalTo(subCategoria))
+        assertThat(subcategoriaDao!!.findByParent(categoria.codigo!!).first(), equalTo(subCategoria))
     }
 
     @Test
@@ -93,10 +88,8 @@ class EstructuraCompletaTest {
         val estructura = Estructura(1, "Estructura", false, InformacionVersion.new())
         estructuraDao!!.insert(estructura)
 
-        val categoria = Categoria(1, "Categoria", Division.new().copy(custom = false), InformacionVersion.new())
+        val categoria = Categoria(1, 1, "Categoria", Division.new().copy(custom = false), InformacionVersion.new())
         categoriaDao!!.insert(categoria)
-
-        manyToManyDao!!.insert(CategoriaxEstructura(1, 1))
 
         val subCategoria = SubCategoria(1, 1, "Subcategoria", "Ayuda", Division.new().copy(custom = false), InformacionVersion.new())
         subcategoriaDao!!.insert(subCategoria)
@@ -108,7 +101,7 @@ class EstructuraCompletaTest {
         assertThat(result.size, equalTo(1))
         assertThat(result.first(), equalTo(campo))
 
-        assertThat(campoDao!!.findByParent(subCategoria.codigo).first(), equalTo(campo))
+        assertThat(campoDao!!.findByParent(subCategoria.codigo!!).first(), equalTo(campo))
     }
 
     @After

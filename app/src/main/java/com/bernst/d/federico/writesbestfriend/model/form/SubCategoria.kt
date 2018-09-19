@@ -12,7 +12,7 @@ import com.bernst.d.federico.writesbestfriend.model.InformacionVersion
                 onUpdate = ForeignKey.CASCADE
         )])
 data class SubCategoria(
-        @PrimaryKey(autoGenerate = true) var codigo: Long,
+        @PrimaryKey(autoGenerate = true) var codigo: Long?,
         @ColumnInfo var codCategoria: Long,
         @ColumnInfo var descripcion: String,
         @ColumnInfo var help: String?,

@@ -7,7 +7,6 @@ import com.bernst.d.federico.writesbestfriend.db.FormDataBase
 import com.bernst.d.federico.writesbestfriend.db.dao.*
 import com.bernst.d.federico.writesbestfriend.model.InformacionVersion
 import com.bernst.d.federico.writesbestfriend.model.form.*
-import com.bernst.d.federico.writesbestfriend.model.form.manytomany.CategoriaxEstructura
 import org.hamcrest.CoreMatchers.equalTo
 import org.junit.After
 import org.junit.Assert.assertThat
@@ -52,10 +51,8 @@ class EstructuraNavigationTest {
         estructura = Estructura(1, "Estructura", false, InformacionVersion.new())
         estructuraDao.insert(estructura)
 
-        categoria = Categoria(1, "Categoria", Division.new().copy(custom = false), InformacionVersion.new())
+        categoria = Categoria(1, 1, "Categoria", Division.new().copy(custom = false), InformacionVersion.new())
         categoriaDao.insert(categoria)
-
-        manyToManyDao.insert(CategoriaxEstructura(1, 1))
 
         subCategoria = SubCategoria(1, 1, "Subcategoria", "Ayuda", Division.new().copy(custom = false), InformacionVersion.new())
         subcategoriaDao.insert(subCategoria)
@@ -77,7 +74,7 @@ class EstructuraNavigationTest {
             categoriaDao.byID(subCategoria.codCategoria)
         }.map {
             assertThat(it, equalTo(categoria))
-            estructuraDao.byCategoriaID(it.codigo)
+            estructuraDao.byCategoriaID(it.codigo!!)
         }.map {
             assertThat(it.first(), equalTo(estructura))
         }

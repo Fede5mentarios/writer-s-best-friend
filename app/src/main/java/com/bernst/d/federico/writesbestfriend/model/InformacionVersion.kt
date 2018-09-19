@@ -6,7 +6,7 @@ import java.util.*
 data class InformacionVersion(
         @ColumnInfo var fechaModificacion: Calendar?,
         @ColumnInfo var fechaCreacion: Calendar?,
-        @ColumnInfo var delete: Boolean?) {
+        @ColumnInfo var delete: Boolean) {
     companion object {
         fun new(): InformacionVersion {
             return InformacionVersion(
